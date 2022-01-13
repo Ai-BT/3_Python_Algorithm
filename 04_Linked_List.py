@@ -16,57 +16,46 @@
 # 주소만 알면 데이터를 알 수 있다.
 
 
-# %%
-
 # class Node: # 데이터, 주소 2가지 저장공간을 만들기 위해 class 사용
 #     def __init__(self, data):
 #         self.data = data
 #         self.nets = None
 
+
 class Node:
+    # 생성자
+    # self는 인스턴스(주소)를 자동으로 전달하는 것이다.
     def __init__(self, data, next=None):
         self.data = data
         self.next = next
 
-# Node 와 Node 연결하기
+# 인스턴스 생성
+node1 = Node(0)
 
-node1 = Node(1)
-node2 = None(2)
-node1.next = node2
+# 인스턴스 할당
+# 첫번째 head를 '0' 으로 할당
 head = node1
 
-# %%
-
-# 링크드 리스트로 데이터 추가하기
-
-class Node:
-    def __init__(self, data, next=None):
-        self.data = data
-        self.next = next
-
+# 링크드 리스트에 데이터 추가
 def add(data):
-    node = head
-    while node.next: # node next를 계속 가는 것
-        node = node.next
-    # Node 이면
-    node.next = Node(data)
+    node = head # 첫 데이터를 node에 할당
+    while node.next:
+        node = node.next # None 이면, 끝남
+    node.next = Node(data) # 인스턴스를 할당된 만큼 만들어 줌
 
-node1 = Node(1)
-head = node1
+# 데이터 for문 으로 추가
+for index in range(1,10):
+    add(index) # add 함수 9번 실행, 인자 전달
 
-for index in range(1, 10):
-    add(index)
+# 링크드 리스트 데이터 출력
+node = head # 초기 위에서 할당된 0 을 가져옴
 
 
-# 링크드 리스트 데이터 출력(검색하기)
-node = head
 while node.next:
-    print(node.data)
-    node = node.next
+    print(node.data) # 8까지만 반복
+    node = node.next # 9 까지 node 값이 할당 되고, while문 종료
 
-print(node.data)
-
-
+print(node.data) #한번 더 출력해서 끝까지 데이터 출력
 
 
-# %%
+
