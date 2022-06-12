@@ -29,6 +29,46 @@ class Wizard:
 x = Wizard(health=545, mana=210, armor=10)
 print(x.health, x.mana, x.armor)
 x.attack()
+
+# %%
+
+# self 스스로 메모리를 생성하여 전달하는 역할
+class Foo01:
+        def func1():
+                print("function 1")
+        def func2(self):
+                print("function 2")
+
+f = Foo01()
+
+f.func2()
+# 파이썬 메서드의 첫번째 인자로 항상 인스턴스가 전달 되기 때문에 발생하는 문제
+# 인자가 없지만 하나를 받아서 error
+# f.func1() 
+
+# %%
+
+# 파이썬의 클래스는 그 자체가 하나의 네임스페이스이기 때문에 인스터스 생성과 상관없이
+# 클래스 내의 메소드를 직접 호출 할 수 있습니다.
+
+class Foo02:
+    def func1():
+            print("function 1")
+
+    def func2(self):
+            print(id(self))
+            print("function 2")
+
+f = Foo02()
+
+print( id(f)) 
+f.func2()
+
+# 위 코드는 func1 메서드를 호출했지만 앞서 인스턴스를 통해 메서드를 호출했던 것과는 달리 오류가 발생하지 않는 것을 확인할 수 있습니다. 
+# 왜냐하면 인스턴스.메서드() 형태로 호출한 것과 달리 이번에는 클래스명.메서드() 형태로 호출했기 때문입니다.
+Foo02.func1()
+
+
 # %%
 
 # 3. 우리 태양계를 이루고 있는 행성은 수성, 금성, 지구, 화성, 목성, 토성, 천왕성, 해왕성으로 총 8개 입니다. 
