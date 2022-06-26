@@ -46,3 +46,53 @@ print(a(10))
 print(b(10))
 print(c(10))
 # %%
+
+# print("""
+# \    /\\
+#  )  ( ')
+# (  /  )
+# \(__)|
+#     """)
+print("\    /\\")
+print(" )  ( ')")
+print("(  /  )")
+print(" \(__)|")
+
+
+# %%
+
+print("|\_/|")
+print("|q p|   /}")
+print('( 0 )"""\\')
+print('|"^"`    |')
+print("||_/=\\\__|")
+
+
+# |\_/|
+# |q p|   /}
+# ( 0 )"""\
+# |"^"`    |
+# ||_/=\\__|
+# %%
+
+a, b = map(int, input().split())
+print(a+b)
+# %%
+
+name = input(str)
+print("{}??!".format(name))
+
+print(input() + "??!")
+
+# %%
+
+# print(2541-1998)
+
+
+print(int(input()) - 543)
+
+
+
+
+
+# %%
