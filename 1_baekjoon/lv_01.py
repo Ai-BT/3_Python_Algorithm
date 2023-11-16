@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # %%
 # 10171
 
@@ -36,6 +35,3 @@ print(input() + "??!")
 
 print(int(input()) - 543)
 
-=======
-test = "test"
->>>>>>> d28c18aebd3333e2ec0fcfea610e945cf88cc575
