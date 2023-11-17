@@ -21,7 +21,7 @@ print("||_/=\\\__|")
 # 1000
 
 a, b = map(int, input().split())
-print(a+b)
+print(a + b)
 # %%
 # 10926
 
@@ -34,4 +34,3 @@ print(input() + "??!")
 # 18108
 
 print(int(input()) - 543)
-
