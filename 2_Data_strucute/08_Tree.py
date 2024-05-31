@@ -13,7 +13,7 @@
 
 # %%
 
-# 1. 노드 클래스 만들기
+# 1. 노드 클래스
 class Node:
     def __init__(self, value):
         self.value = value
