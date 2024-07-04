@@ -112,7 +112,11 @@ def check_bin(x):
 # reverse = True 줘서 내림차순으로 변경
 sorted_data = sorted(data, key=lambda x: (check_bin(x), x), reverse=True)
 
-print(sorted_data)
+# 첫 번째 코드: 오직 check_bin(x)의 결과만을 기준으로 내림차순 정렬합니다.
+# sorted(alist, key=lambda x: (check_bin(x)), reverse=True)
+
+# 두 번째 코드: check_bin(x)의 결과를 첫 번째 기준으로, x 자체를 두 번째 기준으로 하여 내림차순 정렬합니다. 즉, check_bin(x)의 결과가 동일한 경우 x 자체로 내림차순 정렬합니다.
+# sorted(alist, key=lambda x: (check_bin(x), x), reverse=True)
 
 
 def check_bin(num):
