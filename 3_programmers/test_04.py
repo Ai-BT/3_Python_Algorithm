@@ -25,6 +25,22 @@
 # 출력 1
 # 2
 
+# n = 3, 1+4+9
+
+k = 2
+a = [10, 20, 22, 12, 11]
+
+count = 0
+for i in range(len(a)):
+    num = int(a[i])
+
+    if k in num:
+        count += 1
+
+count
+
+
+# %%
 N, K = 5, "2"
 alist = [10, 20, 22, 12, 11]
 
@@ -37,7 +53,7 @@ count = 0
 for i in range(len(alist)):
     check_num = str(alist[i])
 
-    if K in check_num:
+    if K not in check_num:
         count += 1
 
 count

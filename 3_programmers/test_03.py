@@ -19,19 +19,22 @@
 # N, K = map(int, input().split())
 # alist = list(map(int, input().split()))
 
-K = 4
-alist = [1, 2, 3, 4, 5, 6, 7, 8]
+
+N = 8
+K = 6
+
+# N, K = map(int, input().split())
+alist = list(map(int, input().split()))
+
+# alist = [1, 2, 3, 4, 5, 6, 7, 8]
 
 
 def check_bin(x):
-    return bin(x).count("1")
+    return bin(x).count('1')
 
 
-result = [check_bin(x) for x in alist]
-result
+check_bin(alist)
 
-sort_list = sorted(alist, key=lambda x: (check_bin(x), x), reverse=True)
-sort_list[K-1]
 
 # %%
 
