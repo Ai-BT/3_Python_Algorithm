@@ -27,15 +27,16 @@
 
 # n = 3, 1+4+9
 
-k = 2
+k = "2"
 a = [10, 20, 22, 12, 11]
 
 count = 0
 for i in range(len(a)):
-    num = int(a[i])
+    num = str(a[i])
 
-    if k in num:
+    if k not in num:
         count += 1
+    
 
 count
 

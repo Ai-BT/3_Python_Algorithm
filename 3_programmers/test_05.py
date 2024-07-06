@@ -48,19 +48,23 @@
 
 schedule = [(3, 4), (1, 2), (5, 6), (1, 10), (2, 8)]
 
-sorted_schedule = sorted(schedule, key=lambda x: x[1])
 
-# print(sorted_schedule)
+sort_schedule = sorted(schedule, key= lambda x: x[1])
 
-last_end_time = -1
+print(sort_schedule)
+
+
 count = 0
-for event in sorted_schedule:
-
-    if event[0] > -1:
+last_end_time = -1
+for event in sort_schedule:
+    print(event[0])
+    if event[0] > last_end_time:
         count += 1
         last_end_time = event[1]
-
+        
 count
+        
+
 
 
 # %%
@@ -86,7 +90,7 @@ sort_schedule = sorted(schedule, key=lambda x: x[1])  # 끝나는 시간을 기�
 last_end_time = -1
 count = 0
 
-for event in schedule:
+for event in sort_schedule:
     if event[0] > last_end_time:  # 이전 행사 종료 시간보다 시작 시간이 크면 (시간 겹치지 않음)
         count += 1
         last_end_time = event[1]

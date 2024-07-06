@@ -16,24 +16,20 @@
 # 출력
 # 4
 
-# N, K = map(int, input().split())
-# alist = list(map(int, input().split()))
-
-
-N = 8
-K = 6
-
-# N, K = map(int, input().split())
+N, K = map(int, input().split())
 alist = list(map(int, input().split()))
 
-# alist = [1, 2, 3, 4, 5, 6, 7, 8]
-
+alist = [1,2,3,4,5,6,7,8]
 
 def check_bin(x):
-    return bin(x).count('1')
+    return bin(x).count("1")
+
+a = list(map(check_bin, alist))
+a
 
 
-check_bin(alist)
+
+
 
 
 # %%
